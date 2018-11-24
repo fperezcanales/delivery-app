@@ -2,7 +2,7 @@
 import * as React from 'react';
 
 const style = {
-    alignItems: 'center',
+    /*alignItems: 'center',*/
     backgroundColor: '#eee',
     display: 'flex',
     height: 'calc(100vh - 20px)',

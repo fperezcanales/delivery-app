@@ -1,18 +1,22 @@
 import * as React from 'react';
 
+import './App.css';
+
 import { connect } from 'react-redux';
 import { decrementar, incrementar, setear } from './reducer';
 
-import './App.css';
-import Button from './modulos/Button';
-import Card from './modulos/Card';
-import Center from './modulos/Center';
-import Container from './modulos/Container';
-import Input from './modulos/Input';
-import Link from './modulos/Link';
-import Title from './modulos/Title';
 
-// import UserForm from './modulos/form/UserForm';
+import Container from './modulos/Container';
+
+import FormLogin from './modulos/form/FormLogin';
+import FormMenuIcons from './modulos/form/FormMenuIcons';
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
+
+
+library.add(faStroopwafel)
+
 import miThunk from './thunk';
 
 
@@ -46,15 +50,9 @@ class App extends React.Component<IProps, IState> {
 
 		return (
 			<Container>
-				<Card>
-					<Title>Iniciar session</Title>
-					<Input label='Correo' placeholder='ingrese correo'/>
-					<Input label='Contrasenia' placeholder='ingrese contrasenia'/>
-					<Button block={true}>Enviar</Button>
-					<Center>
-						<Link >Ir al registro</Link>
-					</Center>
-				</Card>
+				<FormLogin/>
+				<FormMenuIcons/>
+
 			</Container>
 		);
 	}
