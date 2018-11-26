@@ -8,8 +8,12 @@ import { decrementar, incrementar, setear } from './reducer';
 
 import Container from './modulos/Container';
 
-import FormLogin from './modulos/form/FormLogin';
-import FormMenuIcons from './modulos/form/FormMenuIcons';
+// import FormLogin from './modulos/form/FormLogin';
+// import FormPopup from './modulos/form/FormPopup';
+
+import CrearPedido from './modulos/container/CrearPedido';
+// import FormMenuIcons from './modulos/form/FormMenuIcons';
+
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
@@ -20,16 +24,13 @@ library.add(faStroopwafel)
 import miThunk from './thunk';
 
 
-
-
-
-
 class App extends React.Component<IProps, IState> {
 
 	public constructor(props) {
 		super(props);
 		this.props.miThunk('lala');
 	}
+
 	public handleSetear = (e: any) => {
 		// const { setear } = this.props;
 		const { valor } = this.state;
@@ -50,9 +51,8 @@ class App extends React.Component<IProps, IState> {
 
 		return (
 			<Container>
-				<FormLogin/>
-				<FormMenuIcons/>
-
+				
+				<CrearPedido/>
 			</Container>
 		);
 	}
