@@ -21,9 +21,8 @@ class FormLogin extends React.Component{
 
                 <Button block={true}>Guardar</Button>
                 <Center>
-                    <Link >Buscar  cliente</Link>
+                    <Link>Buscar  cliente</Link>
                 </Center>
-                <hr/>
             </Card>
         );
     }
